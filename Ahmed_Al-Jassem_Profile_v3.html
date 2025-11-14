@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Al-Jassem | Your Name</title>
+    <title>Ahmed Al-Jassem | Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -28,13 +28,14 @@
             background-color: var(--dark);
             color: var(--light);
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         
         /* Header & Navigation */
@@ -44,17 +45,18 @@
             width: 100%;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
         }
@@ -69,13 +71,14 @@
         }
         
         .nav-links li {
-            margin-left: 30px;
+            margin-left: 25px;
         }
         
         .nav-links a {
             color: var(--light);
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s;
         }
         
@@ -91,22 +94,30 @@
         
         /* Hero Section */
         .hero {
-            padding: 150px 0 100px;
+            padding: 140px 0 80px;
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
             text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            width: 100%;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
             margin-bottom: 20px;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            line-height: 1.2;
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             max-width: 700px;
             margin: 0 auto 30px;
             color: var(--gray);
@@ -123,6 +134,7 @@
             text-decoration: none;
             transition: all 0.3s;
             cursor: pointer;
+            font-size: 1rem;
         }
         
         .btn:hover {
@@ -133,16 +145,16 @@
         
         /* Sections */
         section {
-            padding: 100px 0;
+            padding: 80px 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
         
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin-bottom: 15px;
             position: relative;
             display: inline-block;
@@ -163,44 +175,46 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 40px;
             align-items: center;
         }
         
         .about-text h3 {
-            font-size: 1.8rem;
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
             margin-bottom: 20px;
         }
         
         .about-text p {
             margin-bottom: 20px;
             color: var(--gray);
+            font-size: 1rem;
         }
         
         .education-item {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .education-item h4 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 5px;
             color: var(--primary);
         }
         
         .education-item p {
             color: var(--gray);
+            font-size: 0.95rem;
         }
         
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
         }
         
         .skill-category {
             background-color: var(--dark-light);
-            padding: 30px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
@@ -211,7 +225,7 @@
         }
         
         .skill-category h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 20px;
             color: var(--secondary);
             display: flex;
@@ -230,6 +244,7 @@
             margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
+            font-size: 0.95rem;
         }
         
         .skill-list li::before {
@@ -242,8 +257,8 @@
         /* Vulnerabilities Section */
         .vulnerabilities-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
         }
         
         .vulnerability-card {
@@ -259,7 +274,7 @@
         }
         
         .vuln-header {
-            padding: 20px;
+            padding: 18px;
             background-color: var(--primary);
             color: white;
             display: flex;
@@ -268,13 +283,13 @@
         }
         
         .vuln-header h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
         
         .severity {
             padding: 5px 10px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: bold;
         }
         
@@ -291,12 +306,13 @@
         }
         
         .vuln-body {
-            padding: 20px;
+            padding: 18px;
         }
         
         .vuln-body p {
             margin-bottom: 15px;
             color: var(--gray);
+            font-size: 0.95rem;
         }
         
         .vuln-details {
@@ -306,6 +322,7 @@
         .vuln-details h4 {
             color: var(--secondary);
             margin-bottom: 10px;
+            font-size: 1rem;
         }
         
         .vuln-details ul {
@@ -316,6 +333,7 @@
             margin-bottom: 8px;
             padding-left: 20px;
             position: relative;
+            font-size: 0.9rem;
         }
         
         .vuln-details li::before {
@@ -328,13 +346,13 @@
         /* Current Studies Section */
         .studies-content {
             background-color: var(--dark-light);
-            padding: 40px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .study-item {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             padding-bottom: 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -344,31 +362,32 @@
         }
         
         .study-item h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 10px;
             color: var(--primary);
         }
         
         .study-item p {
             color: var(--gray);
+            font-size: 0.95rem;
         }
         
         /* Tools Section */
         .tools-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 25px;
         }
         
         .tool-category {
             background-color: var(--dark-light);
-            padding: 30px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .tool-category h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 20px;
             color: var(--secondary);
         }
@@ -381,6 +400,7 @@
             margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
+            font-size: 0.95rem;
         }
         
         .tool-list li::before {
@@ -394,7 +414,7 @@
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 40px;
         }
         
         .contact-info {
@@ -409,9 +429,10 @@
         }
         
         .contact-item i {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-right: 15px;
             color: var(--primary);
+            min-width: 25px;
         }
         
         .contact-form {
@@ -428,6 +449,7 @@
         .form-group label {
             margin-bottom: 8px;
             font-weight: 500;
+            font-size: 0.95rem;
         }
         
         .form-group input,
@@ -441,14 +463,14 @@
         }
         
         .form-group textarea {
-            min-height: 150px;
+            min-height: 140px;
             resize: vertical;
         }
         
         /* Footer */
         footer {
             background-color: var(--dark-light);
-            padding: 50px 0 20px;
+            padding: 40px 0 20px;
             text-align: center;
         }
         
@@ -456,7 +478,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .social-links a {
@@ -479,7 +501,7 @@
         
         .copyright {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         
         /* Responsive Design */
@@ -487,10 +509,15 @@
             .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
             
-            .hero h1 {
-                font-size: 2.8rem;
+            .hero {
+                padding: 130px 0 70px;
+            }
+            
+            section {
+                padding: 70px 0;
             }
         }
         
@@ -501,16 +528,17 @@
             
             .nav-links {
                 position: fixed;
-                top: 80px;
+                top: 70px;
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - 80px);
+                height: calc(100vh - 70px);
                 background-color: var(--dark);
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
-                padding-top: 50px;
-                transition: left 0.3s;
+                padding-top: 40px;
+                transition: left 0.3s ease-in-out;
+                z-index: 999;
             }
             
             .nav-links.active {
@@ -521,13 +549,103 @@
                 margin: 15px 0;
             }
             
-            .hero h1 {
-                font-size: 2.2rem;
+            .nav-links a {
+                font-size: 1.1rem;
             }
             
-            .section-title h2 {
-                font-size: 2rem;
+            .hero {
+                padding: 120px 0 60px;
             }
+            
+            .skills-grid,
+            .tools-grid,
+            .vulnerabilities-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                margin-bottom: 40px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .skill-category,
+            .tool-category,
+            .vulnerability-card {
+                padding: 20px;
+            }
+            
+            .studies-content {
+                padding: 25px;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .contact-item i {
+                margin-right: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+            
+            .hero {
+                padding: 110px 0 50px;
+            }
+            
+            section {
+                padding: 50px 0;
+            }
+            
+            .section-title {
+                margin-bottom: 30px;
+            }
+            
+            .btn {
+                padding: 10px 25px;
+                font-size: 0.95rem;
+            }
+            
+            .skill-category,
+            .tool-category,
+            .vulnerability-card {
+                padding: 18px;
+            }
+            
+            .studies-content {
+                padding: 20px;
+            }
+            
+            .social-links {
+                gap: 15px;
+            }
+            
+            .social-links a {
+                width: 38px;
+                height: 38px;
+            }
+        }
+        
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+        
+        .mt-20 {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -556,41 +674,42 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Ahmed Al-Jassem</h1>
-            <p>Mechatronics Engineering Student | Cybersecurity Enthusiast | Ethical Hacker</p>
-            <a href="#contact" class="btn">Get In Touch</a>
+            <div class="hero-content">
+                <h1>Ahmed Al-Jassem</h1>
+                <p>Mechatronics Engineering Student | Cybersecurity Enthusiast | Ethical Hacker</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-<!-- About Section -->
-<section id="about">
-    <div class="container">
-        <div class="section-title">
-            <h2>About Me</h2>
-        </div>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Hello, I'm a Junior Cybersecurity Engineer</h3>
-                <p>I'm a dedicated Mechatronics Engineering student at Aleppo University with a strong passion for cybersecurity. My engineering background provides me with a unique systems-thinking approach to security challenges, understanding how hardware, software, and networks integrate to create complex systems.</p>
-                <p>My journey in cybersecurity began by exploring how automated systems and industrial controls can be secured against modern threats. While I'm not yet an expert, I'm constantly expanding my knowledge in both offensive and defensive security techniques, applying engineering methodologies to identify vulnerabilities and build robust protection mechanisms.</p>
-                <p>My goal is to grow into a cybersecurity expert who can help organizations protect their critical digital infrastructure by leveraging my interdisciplinary engineering perspective.</p>
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
             </div>
-            <div class="education">
-                <div class="education-item">
-                    <h4>Mechatronics Engineering</h4>
-                    <p>Aleppo University | Level Three</p>
-                    <p>Currently pursuing my degree with focus on automation, robotics, and control systems.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello, I'm a Junior Cybersecurity Engineer</h3>
+                    <p>I'm a dedicated Mechatronics Engineering student at Aleppo University with a strong passion for cybersecurity. My engineering background provides me with a unique systems-thinking approach to security challenges, understanding how hardware, software, and networks integrate to create complex systems.</p>
+                    <p>My journey in cybersecurity began by exploring how automated systems and industrial controls can be secured against modern threats. While I'm not yet an expert, I'm constantly expanding my knowledge in both offensive and defensive security techniques, applying engineering methodologies to identify vulnerabilities and build robust protection mechanisms.</p>
+                    <p>My goal is to grow into a cybersecurity expert who can help organizations protect their critical digital infrastructure by leveraging my interdisciplinary engineering perspective.</p>
                 </div>
-                <div class="education-item">
-                    <h4>Cybersecurity Self-Study</h4>
-                    <p>Online Courses & Practical Experience</p>
-                    <p>Continuously learning through online platforms, hands-on labs, and cybersecurity challenges.</p>
+                <div class="education">
+                    <div class="education-item">
+                        <h4>Mechatronics Engineering</h4>
+                        <p>Aleppo University | Level Three</p>
+                        <p>Currently pursuing my degree with focus on automation, robotics, and control systems.</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Cybersecurity Self-Study</h4>
+                        <p>Online Courses & Practical Experience</p>
+                        <p>Continuously learning through online platforms, hands-on labs, and cybersecurity challenges.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Skills Section -->
     <section id="skills">
@@ -736,7 +855,6 @@
                     </div>
                 </div>
                 
-                
                 <div class="vulnerability-card">
                     <div class="vuln-header">
                         <h3>Information Disclosure</h3>
@@ -760,6 +878,8 @@
                         </div>
                     </div>
                 </div>    
+            </div>
+        </div>
     </section>
 
     <!-- Current Studies Section -->
@@ -778,19 +898,16 @@
                     <p>Mastering the Standard Template Library (STL) and other C++ libraries to write efficient and maintainable code.</p>
                 </div>
                 <div class="study-item">
-                    <h3>Program Embbeded Systems (ESP32)</h3>
-                    <p>Learne how to program and configure ESP32, Learne how to make it interact with WiFis, Bluetooth, Display monitors and spesific sensors .</p>
+                    <h3>Program Embedded Systems (ESP32)</h3>
+                    <p>Learning how to program and configure ESP32, making it interact with WiFi, Bluetooth, display monitors and specific sensors.</p>
                 </div>
                 <div class="study-item">
-                    <h3>Tring ESP32 To Make Cybersecurity Attacks</h3>
-                    <p>Learne how to make esp32 makes evil twin, Deauthentication attacks and cupture handshake file  As Fliper Zero Device.</p>
+                    <h3>Using ESP32 for Cybersecurity Attacks</h3>
+                    <p>Learning how to make ESP32 create evil twin networks, perform deauthentication attacks and capture handshake files similar to Flipper Zero device.</p>
                 </div>
-
             </div>
         </div>
     </section>
-
-
 
     <!-- Contact Section -->
     <section id="contact">
@@ -836,7 +953,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/xdkyadzv"  method="POST">
+                <form class="contact-form" action="https://formspree.io/f/xdkyadzv" method="POST">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required>
@@ -898,6 +1015,16 @@
             });
         });
 
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const nav = document.querySelector('nav');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (!nav.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
